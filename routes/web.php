@@ -1,7 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\TaskController;
+Route::post('/tasks', [TaskController::class, 'store'])->name('tasks.store');
 Route::get('/', function () {
     return view('welcome');
 });
